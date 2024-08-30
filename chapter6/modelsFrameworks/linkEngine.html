@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Hypermedia - Link Engine/Hypermedia Engine/Link Service</title>
+    <link href="../../default.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="header">
+        <h1>Hypermedia &#8211; Link Engine/Hypermedia Engine/Link Service</h1>
+      </div>
+
+      <div id="headerbar" class="bar">
+        <span class="left">Location: <a href="../../index.html" title="Hypertext Review">Hypertext Review</a> / <a href="../index.html" title="Integration Issues">Integration Issues</a> / <a href="index.html" title="Models and Frameworks">Models and Frameworks</a> / <a href="linkEngine.html" title="Link Engine/Hypermedia Engine/Link Service">Link Engine/Hypermedia Engine/Link Service</a></span>
+        <span class="right"><a href="../../sitemap.html" title="Jump to Site Map">Site Map</a></span>
+        <div style="clear: both"></div>
+      </div>
+
+      <div id="menu">
+        <div class="webgen-menu-vert "><ul><li ><a href="../../index.html" title="Main Index">Main Index</a></li><li ><a href="../../about.html" title="About This Site">About This Site</a></li><li class="webgen-menu-submenu"><a href="../../chapter1/index.html" title="Hypertext - an Introduction">Hypertext - an Introduction</a></li><li class="webgen-menu-submenu"><a href="../../chapter2/index.html" title="Implementation Issues">Implementation Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter3/index.html" title="Database Issues">Database Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter4/index.html" title="User Interface Issues">User Interface Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter5/index.html" title="Information Retrieval Issues">Information Retrieval Issues</a></li><li class="webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="../index.html" title="Integration Issues">Integration Issues</a><ul><li ><a href="../index.html" title="Index">Index</a></li><li ><a href="../intro.html" title="Introduction">Introduction</a></li><li class="webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="index.html" title="Models and Frameworks">Models and Frameworks</a><ul><li ><a href="index.html" title="Index">Index</a></li><li ><a href="ham.html" title="Hypertext Abstract Machine">Hypertext Abstract Machine</a></li><li class="webgen-menu-item-selected"><a href="linkEngine.html" title="Link Engine/Hypermedia Engine/Link Service">Link Engine/Hypermedia Engine/Link Service</a></li><li ><a href="requirementsFrontend.html" title="Front-end Requirements">Front-end Requirements</a></li><li ><a href="requirementsBackend.html" title="Back-end Requirements">Back-end Requirements</a></li><li ><a href="hypermediaToolkit.html" title="Hypermedia Toolkit">Hypermedia Toolkit</a></li><li ><a href="hdm.html" title="HDM">HDM</a></li><li ><a href="dhrm.html" title="Dexter Hypertext Reference Model">Dexter Hypertext Reference Model</a></li><li ><a href="thrm.html" title="Trellis Hypertext Reference Model">Trellis Hypertext Reference Model</a></li><li ><a href="generalFramework.html" title="General Hypertext Framework">General Hypertext Framework</a></li></ul></li><li class="webgen-menu-submenu"><a href="../interchStandards/index.html" title="Interchange Standards">Interchange Standards</a></li><li ><a href="../summary.html" title="Summary">Summary</a></li></ul></li><li class="webgen-menu-submenu"><a href="../../chapter7/index.html" title="Applications">Applications</a></li><li class="webgen-menu-submenu"><a href="../../chapter8/index.html" title="Approach to UI Design for Hypertext">Approach to UI Design for Hypertext</a></li><li ><a href="../../references.html" title="References">References</a></li></ul></div>
+      </div>
+
+      <div id="body">
+        <h3>2.2  Link Engine/Hypermedia Engine/Link Service</h3>
+
+
+	<p><em>Developers of <a href="../../chapter1/systemsPeople/intermedia.html" title="Jump to Intermedia">Intermedia</a>} were interested in developing a
+multiuser hypermedia framework whereby hypertext functionality could be
+handled at the system level &#8211; linking would be available for all
+participating applications</em> <a href="../../references.html#haan92" title="Bibliography of Haan et al., 1992">[Haan et al., 1992]</a>. They proposed &#8220;The <span class="caps">IRIS</span>
+Hypermedia Services&#8221; to provide an integrated desktop environment for
+hypermedia applications such as InterWord, InterDraw, InterVal, InterVideo,
+and InterPlay. These services contain the following components: Intermedia
+Layer, Link Client, and Link Server. These components are independent of
+both operating system and Graphical User Interface.</p>
+
+
+	<p><em>The documents themselves are stored as Unix files while the link and anchor
+data are stored in a <a href="../../chapter3/intro.html" title="Jump to Introduction"><span class="caps">DBMS</span></a></em>. The Link
+Client, the Link Server, and the <span class="caps">DBMS</span> together form the Link Engine. The
+Intermedia Layer is responsible for all live data manipulation while the
+Link Engine is responsible for the storage and retrieval of link data. With
+such an approach Intermedia documents could be interchanged with <a href="../../chapter1/systemsPeople/kms.html" title="Jump to KMS">KMS</a>
+using the <a href="dhrm.html" title="Jump to Dexter Hypertext Reference Model">Dexter Interchange Format</a>.</p>
+
+
+	<p><em>According to Intermedia researchers, following are the requirements to make
+hypermedia an integrated part of the computing environment</em>:</p>
+
+
+	<ol>
+	<li>Integration of hypermedia into the desktop.  The Link Engine must be
+  integrated into the computing environment just as the file system is
+  today.  A higher level toolkit or an application programmer interface
+  (API) must be provided for application developers to issue calls for
+  hypermedia support.</li>
+		<li>Hypermedia systems must provide multiple contexts or multiple webs in
+  order to fully exploit hypertext linking across all applications.</li>
+		<li>Hypermedia applications must support filtering and incremental query
+  construction.</li>
+		<li>Wide Area Hypermedia &#8211; Hypermedia functionality must be extended to
+  support Wide Area Networks in addition to LANs.</li>
+		<li>Building an integrated hypermedia environment is made easier with
+  object-oriented techniques.  Also, the most logical <span class="caps">DBMS</span> to use for storing
+  link and anchor data would be an <a href="../../chapter3/ooDatabase.html" title="Jump to Object-Oriented Database and Hypermedia">Object-Oriented Data Base Management System</a>.</li>
+	</ol>
+
+
+<em>In order to provide an integrated desktop with full hypermedia functionality,
+Bieber has proposed a system-wide hypermedia engine based on the notion of a
+generalized hypermedia using bridge laws</em> (see <a href="../../chapter2/dynamicHypertext.html" title="Jump to Dynamic Hypertext">Section 2.5</a> about
+Dynamic Hypertext) <a href="../../references.html#bieber93b" title="Bibliography of Bieber, 1993b">[Bieber, 1993b]</a>.  <em>This engine would bind independent
+back-end applications such as <a href="../../chapter7/supportInfoSystems.html" title="Jump to Decision Support Systems and Information Systems">Decision Support Systems</a>, Expert Systems,
+Databases and front-ends (interface-oriented applications such as word
+processors, graphics packages) through message-passing mechanisms</em>.  
+<a href="../../chapter2/dynamicHypertext.html" title="Jump to Dynamic Hypertext">Bridge laws</a> map the objects
+defined in the back-end such as models, variables, calculations to objects
+in the front-end such as <a href="../../chapter1/intro/nodesLinks.html" title="Jump to Nodes and Links">nodes, links</a>, and link markers.
+
+	<p><em>Bieber has suggested <a href="requirementsFrontend.html" title="Jump to Front-end Requirements">front-end</a> 
+and <a href="requirementsBackend.html" title="Jump to Back-end Requirements">back-end</a> requirements
+for system-level approaches to hypermedia integration or client/engine
+cooperation</em>.</p>
+
+
+	<p class="nav">The next topic is: <a href="hypermediaToolkit.html" title="Jump to Hypermedia Toolkit">Hypermedia Toolkit</a>.</p>
+      </div>
+
+      <div id="footer" class="bar">
+        generated with <a href="http://webgen.rubyforge.org">Webgen</a> on <b>Sunday, October 15 17:00:10 CEST 2006</b>
+      </div>
+    </div>
+  </body>
+</html>

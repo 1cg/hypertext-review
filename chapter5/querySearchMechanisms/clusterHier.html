@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Hypermedia - Cluster Hierachies, Aggregates, and Exceptions</title>
+    <link href="../../default.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="header">
+        <h1>Hypermedia &#8211; Cluster Hierachies, Aggregates, and Exceptions</h1>
+      </div>
+
+      <div id="headerbar" class="bar">
+        <span class="left">Location: <a href="../../index.html" title="Hypertext Review">Hypertext Review</a> / <a href="../index.html" title="Information Retrieval Issues">Information Retrieval Issues</a> / <a href="index.html" title="Query and Search Mechanisms">Query and Search Mechanisms</a> / <a href="clusterHier.html" title="Cluster Hierachies, Aggregates, and Exceptions">Cluster Hierachies, Aggregates, and Exceptions</a></span>
+        <span class="right"><a href="../../sitemap.html" title="Jump to Site Map">Site Map</a></span>
+        <div style="clear: both"></div>
+      </div>
+
+      <div id="menu">
+        <div class="webgen-menu-vert "><ul><li ><a href="../../index.html" title="Main Index">Main Index</a></li><li ><a href="../../about.html" title="About This Site">About This Site</a></li><li class="webgen-menu-submenu"><a href="../../chapter1/index.html" title="Hypertext - an Introduction">Hypertext - an Introduction</a></li><li class="webgen-menu-submenu"><a href="../../chapter2/index.html" title="Implementation Issues">Implementation Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter3/index.html" title="Database Issues">Database Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter4/index.html" title="User Interface Issues">User Interface Issues</a></li><li class="webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="../index.html" title="Information Retrieval Issues">Information Retrieval Issues</a><ul><li ><a href="../index.html" title="Index">Index</a></li><li ><a href="../intro.html" title="Introduction">Introduction</a></li><li class="webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="index.html" title="Query and Search Mechanisms">Query and Search Mechanisms</a><ul><li ><a href="index.html" title="Index">Index</a></li><li ><a href="contentQueries.html" title="Content Queries and Indexes">Content Queries and Indexes</a></li><li ><a href="structuralQueries.html" title="Structural Queries">Structural Queries</a></li><li ><a href="inferenceNetworks.html" title="Inference Networks">Inference Networks</a></li><li class="webgen-menu-item-selected"><a href="clusterHier.html" title="Cluster Hierachies, Aggregates, and Exceptions">Cluster Hierachies, Aggregates, and Exceptions</a></li></ul></li><li ><a href="../aiTechniques.html" title="Artificial Intelligence Techniques">Artificial Intelligence Techniques</a></li><li ><a href="../browsing.html" title="Information Retrieval and Browsing">Information Retrieval and Browsing</a></li><li ><a href="../summary.html" title="Summary">Summary</a></li></ul></li><li class="webgen-menu-submenu"><a href="../../chapter6/index.html" title="Integration Issues">Integration Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter7/index.html" title="Applications">Applications</a></li><li class="webgen-menu-submenu"><a href="../../chapter8/index.html" title="Approach to UI Design for Hypertext">Approach to UI Design for Hypertext</a></li><li ><a href="../../references.html" title="References">References</a></li></ul></div>
+      </div>
+
+      <div id="body">
+        <h3>2.4.  Cluster Hierarchies, Aggregates, and Exceptions</h3>
+
+
+	<p>Researchers have suggested using the vector space model to organize a hypertext
+collection into clustered hierarchies <a href="../../references.html#crouch89" title="Bibliography of Crouch et al., 1989">[Crouch et al., 1989]</a>.  <em>In this model,
+the content of each node or document is represented by a set of possibly
+weighted terms</em>.  <em>Thus, each document can be represented by a term vector
+and the complete document collection can be represented by a vector space whose
+dimension is equal to the number of distinct terms to identify the documents in
+the collection</em>.  <em>Similar or related documents are represented by similar
+multi-dimensional term vectors</em>.  Such a model facilitates clustering
+documents based on their similarity and ranking retrieved documents in
+decreasing order of their similarity to the query vector.  Hence, the user can
+readily focus the search on those clusters that are likely to contain documents
+which are similar to the query.  Comparisons are generally made between the
+query vector and the document vectors using one of the standard measures of
+similarity.  Clustering is also helpful in locating neighboring nodes which
+discuss related topic(s).  The user can incrementally refine the query vector
+to retrieve the desired document(s).  An interactive browser incorporating the
+cluster hierarchy model was implemented by Crouch et al., on a Macintosh
+connected to a <span class="caps">SUN</span> network running the <span class="caps">SMART</span> Information Retrieval system.
+This interactive browser yielded a significant improvement over automatic
+cluster searches.</p>
+
+
+	<p><em>The <a href="../../chapter3/ooConcepts.html" title="Jump to Object-Oriented Concepts and Hypermedia">object-oriented concept</a> of
+abstraction (generalization/aggregation) will greatly benefit IR in
+hypertext systems</em> <a href="../../references.html#botafogoshneiderman91" title="Bibliography of Botafogo &#38; Shneiderman, 1991">[Botafogo &#38; Shneiderman, 1991]</a>. Abstraction is the
+concealment of all but relevant properties of an object or concept.
+Aggregation is the clustering of related objects to form a higher level
+object. For example, wheels, chassis, engine, body etc., can be aggregated
+together to form the composite object called &#8220;car&#8221;. Generalization is the
+property of treating a set of similar objects as a generic object. For
+example, cars, trucks, buses etc., forms the generic object called
+&#8220;automobile&#8221;. These two concepts of abstraction can be effectively used to
+simplify hypertext structures. A set of related <a href="../../chapter1/intro/nodesLinks.html" title="Jump to Nodes and Links">nodes and the links</a> between them can be treated as a semantic
+cluster (as opposed to the hierarchical cluster proposed by Crouch et al.)
+having the following properties:</p>
+
+
+	<ol style="list-style: lower-alpha;">
+	<li>They form a <em>subgraph</em> of the hypertext graph.</li>
+		<li>The compactness (the degree of interconnectedness of the hypertext) of
+  the subgraph is higher than the compactness of the whole graph.</li>
+	</ol>
+
+
+	<p><em>Graph theoretical algorithms such as biconnected components and strongly
+connected components can be applied in the formation of such clusters or
+aggregates</em>.  A similar approach called Aggregation Clustering With
+Exceptions (ACE) has been proposed to identify aggregates or clusters and
+exceptions (those that do not fall into clusters) <a href="../../references.html#hara91" title="Bibliography of Hara et al., 1991">[Hara et al., 1991]</a>.  Such
+clustering mechanisms facilitate effective IR from hypertext systems.</p>
+
+
+	<p class="nav">The next topic is: <a href="../aiTechniques.html" title="Jump to Artificial Intelligence Techniques">Artificial Intelligence Techniques</a>.</p>
+      </div>
+
+      <div id="footer" class="bar">
+        generated with <a href="http://webgen.rubyforge.org">Webgen</a> on <b>Sunday, October 15 17:00:22 CEST 2006</b>
+      </div>
+    </div>
+  </body>
+</html>

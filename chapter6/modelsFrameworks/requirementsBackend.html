@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Hypermedia - Back-end Requirements</title>
+    <link href="../../default.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="header">
+        <h1>Hypermedia &#8211; Back-end Requirements</h1>
+      </div>
+
+      <div id="headerbar" class="bar">
+        <span class="left">Location: <a href="../../index.html" title="Hypertext Review">Hypertext Review</a> / <a href="../index.html" title="Integration Issues">Integration Issues</a> / <a href="index.html" title="Models and Frameworks">Models and Frameworks</a> / <a href="requirementsBackend.html" title="Back-end Requirements">Back-end Requirements</a></span>
+        <span class="right"><a href="../../sitemap.html" title="Jump to Site Map">Site Map</a></span>
+        <div style="clear: both"></div>
+      </div>
+
+      <div id="menu">
+        <div class="webgen-menu-vert "><ul><li ><a href="../../index.html" title="Main Index">Main Index</a></li><li ><a href="../../about.html" title="About This Site">About This Site</a></li><li class="webgen-menu-submenu"><a href="../../chapter1/index.html" title="Hypertext - an Introduction">Hypertext - an Introduction</a></li><li class="webgen-menu-submenu"><a href="../../chapter2/index.html" title="Implementation Issues">Implementation Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter3/index.html" title="Database Issues">Database Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter4/index.html" title="User Interface Issues">User Interface Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter5/index.html" title="Information Retrieval Issues">Information Retrieval Issues</a></li><li class="webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="../index.html" title="Integration Issues">Integration Issues</a><ul><li ><a href="../index.html" title="Index">Index</a></li><li ><a href="../intro.html" title="Introduction">Introduction</a></li><li class="webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="index.html" title="Models and Frameworks">Models and Frameworks</a><ul><li ><a href="index.html" title="Index">Index</a></li><li ><a href="ham.html" title="Hypertext Abstract Machine">Hypertext Abstract Machine</a></li><li ><a href="linkEngine.html" title="Link Engine/Hypermedia Engine/Link Service">Link Engine/Hypermedia Engine/Link Service</a></li><li ><a href="requirementsFrontend.html" title="Front-end Requirements">Front-end Requirements</a></li><li class="webgen-menu-item-selected"><a href="requirementsBackend.html" title="Back-end Requirements">Back-end Requirements</a></li><li ><a href="hypermediaToolkit.html" title="Hypermedia Toolkit">Hypermedia Toolkit</a></li><li ><a href="hdm.html" title="HDM">HDM</a></li><li ><a href="dhrm.html" title="Dexter Hypertext Reference Model">Dexter Hypertext Reference Model</a></li><li ><a href="thrm.html" title="Trellis Hypertext Reference Model">Trellis Hypertext Reference Model</a></li><li ><a href="generalFramework.html" title="General Hypertext Framework">General Hypertext Framework</a></li></ul></li><li class="webgen-menu-submenu"><a href="../interchStandards/index.html" title="Interchange Standards">Interchange Standards</a></li><li ><a href="../summary.html" title="Summary">Summary</a></li></ul></li><li class="webgen-menu-submenu"><a href="../../chapter7/index.html" title="Applications">Applications</a></li><li class="webgen-menu-submenu"><a href="../../chapter8/index.html" title="Approach to UI Design for Hypertext">Approach to UI Design for Hypertext</a></li><li ><a href="../../references.html" title="References">References</a></li></ul></div>
+      </div>
+
+      <div id="body">
+        <h4>Back-end Requirements</h4>
+
+
+	<p>The hypermedia engine would provide functionality such as linking, annotation,
+<a href="../../chapter4/navigationDesigns/backtracking.html" title="Jump to BackTracking, History, ...">backtracking</a>, 
+<a href="../../chapter5/querySearchMechanisms/index.html" title="Jump to Index">filtering</a>, and 
+<a href="../../chapter4/navigationDesigns/maps.html" title="Jump to Maps and Overiew Diagrams">overviews</a> on behalf of the back-end.  The back-end
+should provide the following functionality:</p>
+
+
+	<ul>
+	<li>Provide specific information about its structure and its applications&#8217;
+  documents.</li>
+		<li><a href="../../chapter2/dynamicHypertext.html" title="Jump to Dynamic Hypertext">Bridge laws</a> must be written by
+  developers. This could be done through a bridge law editor instead of
+  writing predicate logic.</li>
+		<li>Back-ends should provide control information and interpretive mechanisms
+  along with the objects that are sent through messages.  For example,
+  objects that have to serve as link markers could be tagged.</li>
+		<li>Back-ends should support hypermedia engine commands same as the front-end
+  (command lists and context sensitive information).</li>
+		<li>Back-end should incorporate a standard document <a href="../interchStandards/index.html" title="Jump to Index">interchange standard</a> such as <acronym title="Open Document Architecture">ODA</acronym> or 
+  <acronym title="Standard Generalized Markup Language">SGML</acronym>.</li>
+	</ul>
+
+
+	<p><em>Similar to <a href="../../chapter1/systemsPeople/intermedia.html" title="Jump to Intermedia">Intermedia</a>&#8217;s <a href="linkEngine.html" title="Jump to Link Engine/Hypermedia Engine/Link Service">Link Engine</a> 
+and Bieber&#8217;s Hypermedia Engine, Sun&#8217;s Link Service offers an extensible
+protocol to create and maintain relationships between autonomous front-end
+applications</em> <a href="../../references.html#pearl89" title="Bibliography of Pearl, 1989">[Pearl, 1989]</a>. Similar to the approaches seen earlier,
+editing and storing of data objects is managed by independent applications
+which also provide some amount of <a href="requirementsFrontend.html" title="Jump to Front-end Requirements">front-end operations</a> on links. The Link Service stores only the
+representations of the nodes rather than the nodes themselves. Thus, the
+definition and granularity of nodes are left to the individual
+applications. Also, the storage of node data is independent of the storage
+of link data.</p>
+
+
+	<p><em>The Link Service makes it easier for applications to add hypertext
+functionality by providing a simple protocol, a shared back-end or link server,
+a library, and utilities to manage the link database</em> (See <a href="requirementsBackend.html#figure6_2">Figure 6.2</a>).
+<em>Applications communicate with the link server through the Link Service
+protocol</em>.  This service allows independent applications to integrate
+linking mechanisms into their standard functionality and become part of an
+extensible and open hypertext system.  Existing text and graphics editors can
+be integrated into such a framework without any modifications.  Due to the
+separation of node and link data, the Link Service does not provide version
+control, node content editors, concurrent multi-user access, or other forms of
+data integration.</p>
+
+
+	<p class="center"><img src="../../images/chapter62.gif" id="figure6_2" title="An Architecture for Open Hypertext" alt="An Architecture for Open Hypertext" /><br/>
+Figure 6.2: Link Service &#8211; An Architecture for Open Hypertext <a href="../../references.html#pearl89" title="Bibliography of Pearl, 1989">[Pearl, 1989]</a>.</p>
+
+
+	<p><em>Some of the issues involved in developing such an open hypertext system include
+the following</em> <a href="../../references.html#pearl89" title="Bibliography of Pearl, 1989">[Pearl, 1989]</a>:</p>
+
+
+	<ul>
+	<li>The <a href="../../chapter4/intro/index.html" title="Jump to Index">User Interface</a> for the creation
+  and management of links should be consistent with the editors provided
+  by the individual applications.</li>
+		<li>Since the Link Service and the applications are separate processes
+  decisions must be made about sharing/dividing the responsibility for
+  exception handling and user dialogs.</li>
+		<li>The Link Service should detect and remove dangling links, either
+  implicitly or explicitly.  Implicit removal can happen when a user tries
+  to follow a link from its valid end to its invalid end by suggesting to
+  the user to remove the link.  Explicit removal can happen, through a link
+  garbage collection mechanism, by tracking links, validating nodes and
+  removing invalid links.</li>
+		<li>While <a href="../../chapter3/requirementsNG/versioning.html" title="Jump to Versioning">versioning</a> of data objects can
+  be left to the individual applications, the Link Service must still
+  handle the versioning of links. However, the consistency of a versioned
+  hypertext cannot be guaranteed if nodes are versioned separately from links.</li>
+		<li>Unstructured documents such as <span class="caps">ASCII</span> files cannot be handled elegantly
+  since they are not uniquely indexed nor do they carry semantics.</li>
+		<li>The issue of traversing links across networks and locating objects
+  located at remote sites is very important due to performance and cost
+  factors.  Also, decisions have to be made about where on the network
+  should the Link Service process be located.  Another related issue is the
+  invocation of an application which may not be currently running although
+  the user is following a link to a node managed by that application.</li>
+	</ul>
+
+
+	<p class="nav">See also: <a href="requirementsFrontend.html" title="Jump to Front-end Requirements">Front-end Requirements</a>, or go back to the current
+topic: <a href="linkEngine.html" title="Jump to Link Engine/Hypermedia Engine/Link Service">Link Engine/Hypermedia Engine/Link Service</a>.</p>
+      </div>
+
+      <div id="footer" class="bar">
+        generated with <a href="http://webgen.rubyforge.org">Webgen</a> on <b>Sunday, October 15 17:00:10 CEST 2006</b>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Hypermedia - Hypermedia Toolkit</title>
+    <link href="../../default.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="header">
+        <h1>Hypermedia &#8211; Hypermedia Toolkit</h1>
+      </div>
+
+      <div id="headerbar" class="bar">
+        <span class="left">Location: <a href="../../index.html" title="Hypertext Review">Hypertext Review</a> / <a href="../index.html" title="Integration Issues">Integration Issues</a> / <a href="index.html" title="Models and Frameworks">Models and Frameworks</a> / <a href="hypermediaToolkit.html" title="Hypermedia Toolkit">Hypermedia Toolkit</a></span>
+        <span class="right"><a href="../../sitemap.html" title="Jump to Site Map">Site Map</a></span>
+        <div style="clear: both"></div>
+      </div>
+
+      <div id="menu">
+        <div class="webgen-menu-vert "><ul><li ><a href="../../index.html" title="Main Index">Main Index</a></li><li ><a href="../../about.html" title="About This Site">About This Site</a></li><li class="webgen-menu-submenu"><a href="../../chapter1/index.html" title="Hypertext - an Introduction">Hypertext - an Introduction</a></li><li class="webgen-menu-submenu"><a href="../../chapter2/index.html" title="Implementation Issues">Implementation Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter3/index.html" title="Database Issues">Database Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter4/index.html" title="User Interface Issues">User Interface Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter5/index.html" title="Information Retrieval Issues">Information Retrieval Issues</a></li><li class="webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="../index.html" title="Integration Issues">Integration Issues</a><ul><li ><a href="../index.html" title="Index">Index</a></li><li ><a href="../intro.html" title="Introduction">Introduction</a></li><li class="webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="index.html" title="Models and Frameworks">Models and Frameworks</a><ul><li ><a href="index.html" title="Index">Index</a></li><li ><a href="ham.html" title="Hypertext Abstract Machine">Hypertext Abstract Machine</a></li><li ><a href="linkEngine.html" title="Link Engine/Hypermedia Engine/Link Service">Link Engine/Hypermedia Engine/Link Service</a></li><li ><a href="requirementsFrontend.html" title="Front-end Requirements">Front-end Requirements</a></li><li ><a href="requirementsBackend.html" title="Back-end Requirements">Back-end Requirements</a></li><li class="webgen-menu-item-selected"><a href="hypermediaToolkit.html" title="Hypermedia Toolkit">Hypermedia Toolkit</a></li><li ><a href="hdm.html" title="HDM">HDM</a></li><li ><a href="dhrm.html" title="Dexter Hypertext Reference Model">Dexter Hypertext Reference Model</a></li><li ><a href="thrm.html" title="Trellis Hypertext Reference Model">Trellis Hypertext Reference Model</a></li><li ><a href="generalFramework.html" title="General Hypertext Framework">General Hypertext Framework</a></li></ul></li><li class="webgen-menu-submenu"><a href="../interchStandards/index.html" title="Interchange Standards">Interchange Standards</a></li><li ><a href="../summary.html" title="Summary">Summary</a></li></ul></li><li class="webgen-menu-submenu"><a href="../../chapter7/index.html" title="Applications">Applications</a></li><li class="webgen-menu-submenu"><a href="../../chapter8/index.html" title="Approach to UI Design for Hypertext">Approach to UI Design for Hypertext</a></li><li ><a href="../../references.html" title="References">References</a></li></ul></div>
+      </div>
+
+      <div id="body">
+        <h3>2.3  Hypermedia Toolkit</h3>
+
+
+	<p>The toolkit approach mentioned by Haan et al., has been attempted by Puttress
+and Guimaraes.  They have proposed a toolkit that could be used by
+application developers to add hypermedia functionality to their existing
+toolkit, independent of specific applications or environment <a href="../../references.html#puttressguimaraes90" title="Bibliography of Puttress &#38; Guimaraes, 1990">[Puttress &#38; Guimaraes, 1990]</a>. The hypermedia toolkit architecture is similar to
+other multi-tiered architectures (see <a href="hypermediaToolkit.html#figure6_3">Figure 6.3</a>). The layers
+are: Application Software, Hypermedia Toolkit Layer, Storage System, and
+Representation System. The hypermedia toolkit consists of the following
+three components:</p>
+
+
+	<ol style="list-style:  lower-alpha;">
+	<li><i>Storage System Interface</i> (also called Eggs): 
+  This interface consists of a set of C++ classes, providing a hypermedia
+  structure to the stored application data.  It provides the mapping
+  between the application above and the storage system below.  Thus, the
+  storage system can be modified or changed without modifying the
+  application.  Similar to the <span class="caps">HAM</span> approach, the data model is made of
+  graphs, contexts, nodes, links, attributes, and symbols.  This interface
+  does not interpret node data &#8211; it is just considered as a stream of bytes
+  with no structure or meaning.  It provides version control and
+  concurrency control mechanisms.  There is finer transaction management
+  under the control of the application.</li>
+		<li><i>Application Interface</i>: This interface is composed of data objects
+  that communicate with the application above.</li>
+		<li><i>Representation System Interface</i>:  This interface is responsible for
+  the presentation of views using user interface toolkits, independent of
+  the display platform.  The Application Interface and the Representation
+  Interface are made of a set of C++ classes, together called Hypermedia
+  Object-oriented Toolkit (HOT).  <span class="caps">HOT</span> provides the abstractions required
+  for hypermedia applications while encapsulating the details of the
+  storage and representation systems.  <span class="caps">HOT</span> consists of Data classes that
+  include:  HGraph, HContext, HNode, and HLink.  It also consists of View
+  classes for each of the Data classes:  HGraphView, HContextView,
+  HNodeView, HLinkView and HFrame.</li>
+	</ol>
+
+
+	<p class="center"><img src="../../images/chapter63.gif" id="figure6_3" title="Hypermedia Toolkit Architecture" alt="Hypermedia Toolkit Architecture" /><br/>
+Figure 6.3: Hypermedia Toolkit Architecture <a href="../../references.html#puttressguimaraes90" title="Bibliography of Puttress &#38; Guimaraes, 1990">[Puttress &#38; Guimaraes, 1990]</a>.</p>
+
+
+	<p>Puttress and Guimaraes report that this architecture will be extended to
+support multi-user environments, to provide effective means of sharing and
+communication between users of hypermedia applications, and exploring means to
+the development of collaborative hypermedia <a href="../../references.html#puttressguimaraes90" title="Bibliography of Puttress &#38; Guimaraes, 1990">[Puttress &#38; Guimaraes, 1990]</a>.</p>
+
+
+	<p class="nav">The next topic is: <a href="hdm.html" title="Jump to HDM">HDM</a>.</p>
+      </div>
+
+      <div id="footer" class="bar">
+        generated with <a href="http://webgen.rubyforge.org">Webgen</a> on <b>Sunday, October 15 17:00:11 CEST 2006</b>
+      </div>
+    </div>
+  </body>
+</html>

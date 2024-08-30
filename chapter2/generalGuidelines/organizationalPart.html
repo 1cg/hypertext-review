@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Hypermedia - The Organizational Part</title>
+    <link href="../../default.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="header">
+        <h1>Hypermedia &#8211; The Organizational Part</h1>
+      </div>
+
+      <div id="headerbar" class="bar">
+        <span class="left">Location: <a href="../../index.html" title="Hypertext Review">Hypertext Review</a> / <a href="../index.html" title="Implementation Issues">Implementation Issues</a> / <a href="index.html" title="General Guidelines">General Guidelines</a> / <a href="organizationalPart.html" title="The Organizational Part">The Organizational Part</a></span>
+        <span class="right"><a href="../../sitemap.html" title="Jump to Site Map">Site Map</a></span>
+        <div style="clear: both"></div>
+      </div>
+
+      <div id="menu">
+        <div class="webgen-menu-vert "><ul><li ><a href="../../index.html" title="Main Index">Main Index</a></li><li ><a href="../../about.html" title="About This Site">About This Site</a></li><li class="webgen-menu-submenu"><a href="../../chapter1/index.html" title="Hypertext - an Introduction">Hypertext - an Introduction</a></li><li class="webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="../index.html" title="Implementation Issues">Implementation Issues</a><ul><li ><a href="../index.html" title="Index">Index</a></li><li class="webgen-menu-submenu"><a href="../conversion/index.html" title="Conversion of Text to Hypertext">Conversion of Text to Hypertext</a></li><li class="webgen-menu-submenu"><a href="../conversionTypes/index.html" title="Types of Conversion">Types of Conversion</a></li><li ><a href="../hypertextTemplates.html" title="Hypertext Templates">Hypertext Templates</a></li><li ><a href="../templateRequirements.html" title="Hypertext Template Requirements">Hypertext Template Requirements</a></li><li ><a href="../templateFeatures.html" title="Hypertext Template Features">Hypertext Template Features</a></li><li class="webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="index.html" title="General Guidelines">General Guidelines</a><ul><li ><a href="index.html" title="Index">Index</a></li><li ><a href="contentPart.html" title="The Content Part">The Content Part</a></li><li class="webgen-menu-item-selected"><a href="organizationalPart.html" title="The Organizational Part">The Organizational Part</a></li><li ><a href="presentationPart.html" title="The Presentation Part">The Presentation Part</a></li></ul></li><li ><a href="../dynamicHypertext.html" title="Dynamic Hypertext">Dynamic Hypertext</a></li><li ><a href="../linearizationHypertext.html" title="Linearization of Hypertext">Linearization of Hypertext</a></li><li ><a href="../summary.html" title="Summary">Summary</a></li></ul></li><li class="webgen-menu-submenu"><a href="../../chapter3/index.html" title="Database Issues">Database Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter4/index.html" title="User Interface Issues">User Interface Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter5/index.html" title="Information Retrieval Issues">Information Retrieval Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter6/index.html" title="Integration Issues">Integration Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter7/index.html" title="Applications">Applications</a></li><li class="webgen-menu-submenu"><a href="../../chapter8/index.html" title="Approach to UI Design for Hypertext">Approach to UI Design for Hypertext</a></li><li ><a href="../../references.html" title="References">References</a></li></ul></div>
+      </div>
+
+      <div id="body">
+        <h3>4.2  The Organizational Part</h3>
+
+
+	<p>Design objects of the organizational part increase coherence by structuring the
+network under a reader-oriented perspective.  Using such an approach, the
+author can tailor variants of a document for different audiences.</p>
+
+
+	<p>Structure nodes organize content <a href="../../chapter1/intro/nodesLinks.html" title="Jump to Nodes and Links">nodes and links</a> in a specific manner. Each structure node has a name and
+a starting node. These can be of two types:</p>
+
+
+	<ol style="list-style:  lower-alpha;">
+	<li>Sequencing nodes that allow the author to
+  define the reading sequence through the content net.  Readers can read
+  only those content nodes that are determined by the sequencing node.</li>
+		<li>Exploration nodes allow the reader to explore &#8211; the reader can simply
+  follow the content links to explore the subnet.</li>
+	</ol>
+
+
+	<p>While sequencing nodes constrain the reader&#8217;s <a href="../../chapter4/navigationDesigns/index.html" title="Jump to Index">navigation</a> through the document, exploration nodes allow
+unconstrained access to its content part.</p>
+
+
+	<p>Structure nodes can be connected by structure links which are also classified
+into two types:</p>
+
+
+	<ol style="list-style: lower-alpha;">
+	<li>Sequencing links associate the content of each
+  sequencing node with a presentation sequence.  They can be used to define
+  ordering such as linear sequence, branching sequence etc.</li>
+		<li>Exploration links provide access to exploration nodes.  An exploration
+  link is embedded into a sequencing node and points to the beginning of an
+  exploration node.</li>
+	</ol>
+
+
+	<p>Sequencing nodes along with sequencing links can present different presentation
+sequences such as sequential paths, branching paths, and conditional paths.</p>
+
+
+	<p>The following design rules can be applied while creating the organizational
+part:</p>
+
+
+	<ol style="list-style: lower-alpha;">
+	<li>Choose an appropriate starting point to serve
+  as an introduction to the document.</li>
+		<li>Construct appropriate paths based on reader&#8217;s interests and knowledge. 
+  This can be done by ordering sequencing nodes and links and providing
+  additional information using exploration nodes and links.  Thus, the
+  author can create multiple versions of the document some having strictly
+  linear sequences, some having branches, and conditional paths, and some a
+  combination of all three.</li>
+	</ol>
+
+
+Based on the above, the following hierarchy of design objects is derived.
+	<p class="center"><img src="../../images/chapter21.gif" id="figure2_1" title="Hierarchy of Design Object Classes" alt="Hierarchy of Design Object Classes" /><br/>
+Figure 2.1: Hierarchy of Design Object Classes <a href="../../references.html#thuring91" title="Bibliography of Thuring et al., 1991">[Thuring et al., 1991]</a>.</p>
+
+
+	<p class="nav">The next part is: <a href="presentationPart.html" title="Jump to The Presentation Part">The Presentation Part</a>.</p>
+      </div>
+
+      <div id="footer" class="bar">
+        generated with <a href="http://webgen.rubyforge.org">Webgen</a> on <b>Sunday, October 15 17:00:17 CEST 2006</b>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Hypermedia - Object-Oriented Concepts and Hypermedia</title>
+    <link href="../default.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="header">
+        <h1>Hypermedia &#8211; Object-Oriented Concepts and Hypermedia</h1>
+      </div>
+
+      <div id="headerbar" class="bar">
+        <span class="left">Location: <a href="../index.html" title="Hypertext Review">Hypertext Review</a> / <a href="index.html" title="Database Issues">Database Issues</a> / <a href="ooConcepts.html" title="Object-Oriented Concepts and Hypermedia">Object-Oriented Concepts and Hypermedia</a></span>
+        <span class="right"><a href="../sitemap.html" title="Jump to Site Map">Site Map</a></span>
+        <div style="clear: both"></div>
+      </div>
+
+      <div id="menu">
+        <div class="webgen-menu-vert "><ul><li ><a href="../index.html" title="Main Index">Main Index</a></li><li ><a href="../about.html" title="About This Site">About This Site</a></li><li class="webgen-menu-submenu"><a href="../chapter1/index.html" title="Hypertext - an Introduction">Hypertext - an Introduction</a></li><li class="webgen-menu-submenu"><a href="../chapter2/index.html" title="Implementation Issues">Implementation Issues</a></li><li class="webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="index.html" title="Database Issues">Database Issues</a><ul><li ><a href="index.html" title="Index">Index</a></li><li ><a href="intro.html" title="Introduction">Introduction</a></li><li class="webgen-menu-item-selected"><a href="ooConcepts.html" title="Object-Oriented Concepts and Hypermedia">Object-Oriented Concepts and Hypermedia</a></li><li class="webgen-menu-submenu"><a href="requirementsNG/index.html" title="Requirements for Next-Generation Systems">Requirements for Next-Generation Systems</a></li><li ><a href="ooDatabase.html" title="Object-Oriented Database and Hypermedia">Object-Oriented Database and Hypermedia</a></li><li ><a href="summary.html" title="Summary">Summary</a></li></ul></li><li class="webgen-menu-submenu"><a href="../chapter4/index.html" title="User Interface Issues">User Interface Issues</a></li><li class="webgen-menu-submenu"><a href="../chapter5/index.html" title="Information Retrieval Issues">Information Retrieval Issues</a></li><li class="webgen-menu-submenu"><a href="../chapter6/index.html" title="Integration Issues">Integration Issues</a></li><li class="webgen-menu-submenu"><a href="../chapter7/index.html" title="Applications">Applications</a></li><li class="webgen-menu-submenu"><a href="../chapter8/index.html" title="Approach to UI Design for Hypertext">Approach to UI Design for Hypertext</a></li><li ><a href="../references.html" title="References">References</a></li></ul></div>
+      </div>
+
+      <div id="body">
+        <h2>2  Object-Oriented Concepts and Hypermedia</h2>
+
+
+	<p>Before we discuss the database <a href="requirementsNG/index.html" title="Jump to Index">requirements</a> of hypermedia, let us try to
+understand the object-oriented paradigm and analyze its relevance to
+hypermedia.  <em>The advantages of using an <span class="caps">OODBMS</span> includes the ability to model
+complexity, to provide a unified representation of the problem domain, and to
+build complex objects</em>.</p>
+
+
+	<p>There have been object-oriented approaches to systems analysis and design,
+programming languages, operating systems and database systems.  Object-oriented
+systems provide many new features that are not present in conventional
+structured systems.  The object-oriented paradigm more closely represents the
+problem domain by mapping abstractions of real world entities as
+objects/classes.  It also focuses on the definition and inheritance of
+behavioral capabilities in the form of operations embedded within objects.  The
+paradigm also supports simpler capabilities for structuring complex objects.</p>
+
+
+	<p>Object-oriented systems, including languages and database management systems
+support concepts such as objects, classes, methods, data abstraction,
+encapsulation, inheritance, schema evolution, reusability,concurrency control,
+correctness, polymorphism, composite objects, active objects, version control
+and direct manipulation <a href="../references.html#cattell91" title="Bibliography of Cattell, 1991">[Cattell, 1991]</a>.</p>
+
+
+	<p><em>Many features from the world of object-oriented analysis, design and
+programming can be extended to the hypertext model</em>.</p>
+
+
+	<ol>
+	<li>Simple <a href="../chapter1/intro/nodesLinks.html" title="Jump to Nodes and Links">nodes</a> can be compared to atomic
+  objects representing primitive data types such as integer, character,
+  string, video frame and bitmap.</li>
+		<li>Objects or nodes can be accessed using object identifiers or node identifiers.</li>
+		<li>A link can be represented by a set of at least two object identifiers. 
+  Links can also be treated as objects with their own identifiers (link
+  identifiers) which can be used to separate index information from
+  content.</li>
+		<li>A composite node in hypertext (made of webs of nodes and links) can be
+  treated as a composite object or an aggregation of simple objects. </li>
+		<li>The concepts of data abstraction and encapsulation can be applied by
+  defining methods to create, delete, update and manipulate nodes and
+  links, to traverse links, and to trigger events. </li>
+		<li>Nodes and links can be grouped under different classes based on
+  structural and behavioral patterns (semantics).  Organizing nodes and
+  links semantically helps manage the network better, eliminates ambiguity,
+  clearly differentiating the purposes of these objects.</li>
+		<li>Nodes and links of a particular class can also inherit properties from
+  related superclasses.  This feature can be used in the creation and
+  management of hypermedia templates &#8211; when a user changes a parent
+  template, these changes can be propagated to all its sub-classed
+  templates.</li>
+		<li>Whenever the properties of nodes and links have to be changed it should
+  be easy to do so through schema evolution. </li>
+		<li>Other object-oriented concepts that are pertinent to hypertext include
+  concurrency control, versioning, and persistence.</li>
+	</ol>
+
+
+	<p>In HyperBase, the basic class was a <code>HB_Object</code> which had three subclasses:
+<code>HB_Node</code>, <code>HB_Link</code>, and <code>HB_Composite_Object</code> <a href="../references.html#schuttstreitz90" title="Bibliography of Schutt &#38; Streitz, 1990">[Schutt &#38; Streitz, 1990]</a>.
+<code>HB_Nodes</code> are <code>HB_Objects</code> with content and history. <code>HB_Links</code> are
+<code>HB_Objects</code> that connect two existing <code>HB_Objects</code>. <code>HB_Composite_Objects</code>
+are collections of references to existing <code>HB_Objects</code>. The generic
+operations of create, modify, copy, delete, retrieve an object (part of or
+whole) were supported for nodes, links, composite objects, and attributes.
+Since the data model was object-oriented, a natural choice to implement
+HyperBase would have been an <span class="caps">OODBMS</span>. However, for reasons of availability,
+a first prototype was implemented on Sybase, a <span class="caps">RDBMS</span>.</p>
+
+
+	<p class="nav">The next topic is: <a href="requirementsNG/index.html" title="Jump to Index">Requirements for Next-Generation Systems</a>.</p>
+      </div>
+
+      <div id="footer" class="bar">
+        generated with <a href="http://webgen.rubyforge.org">Webgen</a> on <b>Sunday, October 15 17:00:24 CEST 2006</b>
+      </div>
+    </div>
+  </body>
+</html>

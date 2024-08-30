@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Hypermedia - Dexter Hypertext Reference Model</title>
+    <link href="../../default.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="header">
+        <h1>Hypermedia &#8211; Dexter Hypertext Reference Model</h1>
+      </div>
+
+      <div id="headerbar" class="bar">
+        <span class="left">Location: <a href="../../index.html" title="Hypertext Review">Hypertext Review</a> / <a href="../index.html" title="Integration Issues">Integration Issues</a> / <a href="index.html" title="Models and Frameworks">Models and Frameworks</a> / <a href="dhrm.html" title="Dexter Hypertext Reference Model">Dexter Hypertext Reference Model</a></span>
+        <span class="right"><a href="../../sitemap.html" title="Jump to Site Map">Site Map</a></span>
+        <div style="clear: both"></div>
+      </div>
+
+      <div id="menu">
+        <div class="webgen-menu-vert "><ul><li ><a href="../../index.html" title="Main Index">Main Index</a></li><li ><a href="../../about.html" title="About This Site">About This Site</a></li><li class="webgen-menu-submenu"><a href="../../chapter1/index.html" title="Hypertext - an Introduction">Hypertext - an Introduction</a></li><li class="webgen-menu-submenu"><a href="../../chapter2/index.html" title="Implementation Issues">Implementation Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter3/index.html" title="Database Issues">Database Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter4/index.html" title="User Interface Issues">User Interface Issues</a></li><li class="webgen-menu-submenu"><a href="../../chapter5/index.html" title="Information Retrieval Issues">Information Retrieval Issues</a></li><li class="webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="../index.html" title="Integration Issues">Integration Issues</a><ul><li ><a href="../index.html" title="Index">Index</a></li><li ><a href="../intro.html" title="Introduction">Introduction</a></li><li class="webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="index.html" title="Models and Frameworks">Models and Frameworks</a><ul><li ><a href="index.html" title="Index">Index</a></li><li ><a href="ham.html" title="Hypertext Abstract Machine">Hypertext Abstract Machine</a></li><li ><a href="linkEngine.html" title="Link Engine/Hypermedia Engine/Link Service">Link Engine/Hypermedia Engine/Link Service</a></li><li ><a href="requirementsFrontend.html" title="Front-end Requirements">Front-end Requirements</a></li><li ><a href="requirementsBackend.html" title="Back-end Requirements">Back-end Requirements</a></li><li ><a href="hypermediaToolkit.html" title="Hypermedia Toolkit">Hypermedia Toolkit</a></li><li ><a href="hdm.html" title="HDM">HDM</a></li><li class="webgen-menu-item-selected"><a href="dhrm.html" title="Dexter Hypertext Reference Model">Dexter Hypertext Reference Model</a></li><li ><a href="thrm.html" title="Trellis Hypertext Reference Model">Trellis Hypertext Reference Model</a></li><li ><a href="generalFramework.html" title="General Hypertext Framework">General Hypertext Framework</a></li></ul></li><li class="webgen-menu-submenu"><a href="../interchStandards/index.html" title="Interchange Standards">Interchange Standards</a></li><li ><a href="../summary.html" title="Summary">Summary</a></li></ul></li><li class="webgen-menu-submenu"><a href="../../chapter7/index.html" title="Applications">Applications</a></li><li class="webgen-menu-submenu"><a href="../../chapter8/index.html" title="Approach to UI Design for Hypertext">Approach to UI Design for Hypertext</a></li><li ><a href="../../references.html" title="References">References</a></li></ul></div>
+      </div>
+
+      <div id="body">
+        <h3>2.5  Dexter Hypertext Reference Model</h3>
+
+
+	<p><em>The Dexter Hypertext Reference Model captures the important abstractions found
+in a wide range of existing and future hypertext systems</em> <a href="../../references.html#halaszschwartz90" title="Bibliography of Halasz &#38; Schwartz, 1990">[Halasz &#38; Schwartz, 1990]</a>. 
+<em>The goal of the model is to provide a systematic basis for comparing
+systems and to develop interchange and interoperability standards</em>. The
+Dexter model divides a hypertext system into three layers (see <a href="dhrm.html#figure6_4">Figure
+6.4</a>):</p>
+
+
+	<h4>a. Runtime Layer</h4>
+
+
+	<p>This layer deals with the <a href="../../chapter2/generalGuidelines/presentationPart.html" title="Jump to The Presentation Part">presentation</a> of hypertext and the dynamics of user
+interaction.  Since it is too broad and diverse to be developed into a generic
+model, the Dexter model does not go into the details of the presentation
+mechanism.  However, presentation mechanisms can be specified containing
+information about how a component/network is to be presented to the user.
+These presentation specifications provide an interface between the runtime
+layer and the storage layer.</p>
+
+
+	<h4>b. Storage Layer</h4>
+
+
+	<p>This is the main focus of the Dexter model. It models a <a href="../../chapter3/intro.html" title="Jump to Introduction">database</a> that is composed of a hierarchy of
+data-containing <a href="../../chapter2/generalGuidelines/contentPart.html" title="Jump to The Content Part">components</a> which are
+interconnected by relational links. Components have unique identifiers and
+links can be identified by a set of two or more component identifiers.
+Components correspond to the general notion of nodes and can contain text,
+graphics, images, audio, video etc. The components are treated as generic
+containers of data and the model does not specify any structure within the
+containers. Thus, the storage layer does not differentiate between text
+components and graphics components. It focuses mainly on the mechanism by
+which components and links are tied together to form hypertext networks.</p>
+
+
+	<h4>c.  Within Component Layer*</h4>
+
+
+	<p>This layer is concerned with the contents and <a href="../../chapter2/generalGuidelines/organizationalPart.html" title="Jump to The Organizational Part">structure</a> within components of the hypertext
+network. Since the range of possible content/structure that can be included
+in a component is open-ended, the Dexter model treats this layer as being
+outside its scope. The assumption is that document structure models such as
+<a href="../interchStandards/odaLimitations.html" title="Jump to Limitations of ODA and possible modifcations"><span class="caps">ODA</span></a>, <a href="../interchStandards/sgmlLimitations.html" title="Jump to Limitations of SGML"><span class="caps">SGML</span></a>, <span class="caps">IGES</span> etc., will be used in conjunction
+with this model to capture content/structure. However, a critical interface
+between the storage layer and the within-component layer called anchoring
+discusses the mechanism of addressing locations or items within the content
+of an individual component. Anchors can identified by a unique anchor
+identifier.</p>
+
+
+	<p class="center"><img src="../../images/chapter64.gif" id="figure6_4" title="Dexter Hypertext Reference Model" alt="Dexter Hypertext Reference Model" /><br/>
+Figure 6.4: Dexter Hypertext Reference Model <a href="../../references.html#halaszschwartz90" title="Bibliography of Halasz &#38; Schwartz, 1990">[Halasz &#38; Schwartz, 1990]</a>.</p>
+
+
+	<p>Halasz and Schwartz claimed that no existing systems support all the mechanisms
+discussed in the Dexter model.  However, existing systems are yet to be fully
+compared to this model.   The model has been used in developing the Dexter
+Interchange Format, a hypertext <a href="../interchStandards/index.html" title="Jump to Index">interchange standard</a>.</p>
+
+
+	<p class="nav">The next topic is: <a href="thrm.html" title="Jump to Trellis Hypertext Reference Model">Trellis Hypertext Reference Model</a>.</p>
+      </div>
+
+      <div id="footer" class="bar">
+        generated with <a href="http://webgen.rubyforge.org">Webgen</a> on <b>Sunday, October 15 17:00:11 CEST 2006</b>
+      </div>
+    </div>
+  </body>
+</html>

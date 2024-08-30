@@ -1,0 +1,207 @@
+  /* CSS for the Hypermedia site */
+  /* Paul van Tilburg <paul@luon.net> */
+
+  /* add style to the main elements */
+  body       { font-family: 'lucida grande', 'bitstream vera', sans-serif; }
+
+  a          { text-decoration: none; }
+  a[href ^= "http://"] {
+    background: url('images/external.png') center right no-repeat;
+    padding-right: 14px;
+    color: #055;
+    background-color: inherit;
+  }
+  a[href ^= "mailto:"] {
+    background: url('images/mail.png') center right no-repeat;
+    padding-right: 14px;
+    color: #055;
+    background-color: inherit;
+  }
+  a:link     { 
+     color: #4d593c; 
+     background-color: inherit;
+     border-bottom: dashed thin #4d593c;
+  }
+  a:visited  { 
+     color: #90a66f; 
+     background-color: inherit;
+     border-bottom: dashed thin #90a66f;
+  }
+  a:hover,
+  a:active   { border-bottom: solid thin; }
+
+  h1, h2, h3, h4 { text-align: left;}
+  h1 { border-bottom: thin solid #594d3c; }
+  h2 { border-bottom: thin dashed #594d3c; }
+  h3 { border-bottom: thin dashed #594d3c; }
+
+  pre {
+     font-size: 90%;
+     overflow: hidden;
+     padding-left: 1em;
+     border: thin solid #8080bf; 
+     color: inherit;
+     background-color: #3c3c59;
+  }
+
+  table { 
+    font-size: 83%; 
+    border: thin solid #222233;
+    width: 100%;
+  }
+  table th { 
+    padding: 0em 0.5em;
+  }
+  table tr.head {
+    color: #ffffff;
+    background-color: #3c3c59; 
+  }
+  table tr.col0 { color: inherit; background-color: #ffffff; }
+  table tr.col1 { color: inherit; background-color: #d6d6ff; }
+  table td {
+    padding: 0em 0.5em;
+    vertical-align: top;
+    line-height: 1.6em;
+  }
+
+  /* add style to the fixed elements */
+
+  #content {
+     width: 52em;
+     margin: 0em auto;
+  }
+
+  #header {
+     padding: 0.2em;
+     color: inherit;
+     background-color: #3c3c59;
+     border-top: thin solid #222233;
+     border-left: thin solid #222233;
+     border-right: thin solid #222233;
+  }
+
+  #header h1 {
+     margin: 0.5em;
+     border: none;
+     color: #ffffff;
+     background-color: inherit;
+  }
+
+  #footer { 
+  }
+
+  #body { 
+    width: 36em;
+    margin-top: 1em;
+    padding-left: 1em;
+    text-align: justify;
+    line-height: 1.8em;
+  }
+
+  #fn0, #fn1, #fn2, #fn3 {
+    border-top: thin dotted #594d3c;
+  }
+
+  /* bar, navigation, bibliography and generic alignment classes */
+
+  .bar {
+     clear: both;
+     padding: 0.2em;
+     text-align: center;
+     font-size: 83%;
+     color: inherit;
+     background-color: #8080bf;
+     border: thin solid #3c3c59;
+  }
+  .bar a         { border-bottom: none; }
+  .bar a:link    { color: #ffffff; background-color: inherit; }
+  .bar a:visited { color: #ffffff; background-color: inherit; }
+
+  .nav { 
+    color: inherit;
+    background-color: #ffefd6;
+    margin: 0.5em -0.5em;
+    margin-right: 0em;
+    padding: 0em 0.5em;
+  }
+
+  .bib-item { 
+    padding-left: 2em;
+    font-size: smaller;
+    line-height: 1.6em;
+  }
+  .bib-id { 
+    margin-left: -2em; 
+    margin-right: 1em; 
+    color: inherit;
+    background-color: #d6d6ff;
+  }
+
+  .small {
+     font-size: smaller;
+  }
+
+  .left, .right {
+     padding: 0em 1em;
+  }
+
+  .left {
+     float: left;
+     text-align: left;
+  }
+
+  .right {
+     float: right;
+     text-align: right;
+  }
+
+  .center {
+     text-align: center;
+  }
+
+  /* styling the menu */
+
+  #menu {
+     float: right;
+     right: 0em;
+     width: 16em;
+     margin: 1em 0em 1em 1em;
+     font-size: 83%;
+     color: inherit;
+     background-color: #e5c79a;
+     border: thin solid #332c22;
+     line-height: 1.2em;
+  }
+
+  #menu a {
+     color: #594d3c;
+     background-color: inherit;
+     text-decoration: none;
+     border-bottom: none;
+  }
+
+  #menu a:hover {
+     text-decoration: underline;
+  }
+
+  #menu ul {
+     list-style-type: none;
+     margin-left: 0em;
+     padding-left: 1em;         /* first ul has some padding left & right */
+     padding-right: 1em;
+  }
+
+  #menu li {
+     padding: 0.5em 0em;        /* inter-item padding */
+  }
+
+  #menu li.webgen-menu-item-selected {
+     font-weight: bold;
+  }
+
+  #menu li > ul {
+     font-weight: normal;
+     padding-top: 0.5em;        /* padding in front of first item */
+     padding-left: 1.2em;       /* indentation */
+     padding-right: 0em;       
+  }
